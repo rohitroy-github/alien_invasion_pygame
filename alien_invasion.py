@@ -63,7 +63,7 @@ class AlienInvasion:
             #loop from 0 to number of aliens which would fit in a single row  
             #the inner loop calculates the number of aliens we require is a single row 
             for alien_number in range(number_aliens_x):
-                self._create_alien(alien_number, row_number)
+                self._create_aliens(alien_number, row_number)
             
     def _create_aliens(self, alien_number, row_number):
         #create an alien and place it in a row 
