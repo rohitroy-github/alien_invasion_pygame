@@ -127,6 +127,13 @@ class AlienInvasion:
         for bullet in self.bullets.copy() :
             if bullet.rect.bottom <= 0:
                 self.bullets.remove(bullet)
+                
+        # chech if any bullet has hit any alien -> 
+        # if so, get rif of the bullet and that particular alien 
+        #groupcollide -> checking whether the first 2 parameters are in the same position or not, if they are it means that they ahve collided and returns True in both case ordering the first the parameters to delete themselves 
+        #hence destroying that particular bullet and alien 
+        collisions = pygame.sprite.groupcollide(self.bullets, self.aliens, True, True)
+        
                     
     def _update_screen(self):
         #redraw the screen during each pass through the loop 
@@ -151,7 +158,7 @@ class AlienInvasion:
         
     def _check_cleet_edges(self):
         # check whether the aliens have reached the edge/end or not 
-        for alien in self.aliens.aprites():
+        for alien in self.aliens.sprites():
             if alien.check_edges():
                 self._change_fleet_direction()
                 break

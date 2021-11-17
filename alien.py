@@ -26,7 +26,7 @@ class Alien(Sprite):
     # this method is to check whether an aliem is at either edge, abd we need to modify update() to allow each alien to move in the appropriate direction
     def check_edges(self):
         #return true is alien at the edge 
-        screen_rect = self.screen_get_rect()
+        screen_rect = self.screen.get_rect()
         
         if self.rect.right >= screen_rect.right or self.rect.left <= 0:
             return True 
