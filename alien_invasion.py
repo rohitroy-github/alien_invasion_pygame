@@ -40,6 +40,7 @@ class AlienInvasion:
             self.ship.update()
             self._update_bullets()
             #print(len(self.bullets))
+            self._update_aliens()
             self._update_screen()
     
     def _create_fleet(self):
@@ -140,6 +141,10 @@ class AlienInvasion:
  
             #make the most recently drawn screen visible  
             pygame.display.flip()
+            
+    def _update_aliens(self):
+        #update the position of all the aliens on the fleet 
+        self.aliens.update()
 
 if __name__ == '__main__' :
     #make a game instance and run the game 
