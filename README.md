@@ -8,4 +8,4 @@ Download the repository and run python file alien_invasion.py using the command 
 > python alien_invasion.py 
 
 # last book log 
-page -> 269(Done)
+page -> 275(Done)
